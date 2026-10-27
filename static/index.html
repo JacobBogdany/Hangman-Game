@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Hangman</h1>
+      <p class="subtitle">Can you guess the secret word before time runs out?</p>
+    </header>
+
+    <!-- Toolbar / Game Setup -->
+    <div class="toolbar">
+      <div class="control-group">
+        <label for="difficulty-select">Difficulty:</label>
+        <select id="difficulty-select">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <button id="new-game-btn" class="btn btn-primary">New Game</button>
+    </div>
+
+    <!-- Main Game Board -->
+    <main class="game-board">
+      <!-- Hangman Graphic Column -->
+      <section class="graphic-section" aria-label="Hangman Gallows">
+        <svg id="hangman-svg" viewBox="0 0 200 240" class="hangman-canvas">
+          <!-- Gallows -->
+          <line x1="20" y1="220" x2="180" y2="220" class="gallows gallows-base" />
+          <line x1="50" y1="220" x2="50" y2="20" class="gallows gallows-upright" />
+          <line x1="50" y1="20" x2="130" y2="20" class="gallows gallows-beam" />
+          <line x1="50" y1="60" x2="90" y2="20" class="gallows gallows-brace" />
+          <line x1="130" y1="20" x2="130" y2="50" class="gallows gallows-rope" />
+
+          <!-- Body parts (hidden initially via CSS/JS) -->
+          <!-- 1: Head -->
+          <circle id="part-head" cx="130" cy="70" r="20" class="body-part part-hidden" />
+          <!-- 2: Spine / Torso -->
+          <line id="part-torso" x1="130" y1="90" x2="130" y2="150" class="body-part part-hidden" />
+          <!-- 3: Left Arm -->
+          <line id="part-arm-left" x1="130" y1="105" x2="100" y2="130" class="body-part part-hidden" />
+          <!-- 4: Right Arm -->
+          <line id="part-arm-right" x1="130" y1="105" x2="160" y2="130" class="body-part part-hidden" />
+          <!-- 5: Left Leg -->
+          <line id="part-leg-left" x1="130" y1="150" x2="105" y2="195" class="body-part part-hidden" />
+          <!-- 6: Right Leg -->
+          <line id="part-leg-right" x1="130" y1="150" x2="155" y2="195" class="body-part part-hidden" />
+        </svg>
+      </section>
+
+      <!-- Gameplay & Controls Column -->
+      <section class="play-section">
+        <!-- Status Notification Banner -->
+        <div id="game-message" class="game-message message-idle" role="status" aria-live="polite">
+          Press <strong>New Game</strong> to start playing!
+        </div>
+
+        <!-- Word Pattern Display -->
+        <div class="pattern-container">
+          <div id="word-pattern" class="pattern">_ _ _ _ _</div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-label">Remaining Guesses:</span>
+            <span id="remaining-guesses" class="stat-value">6</span> / 6
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Incorrect:</span>
+            <span id="incorrect-letters" class="stat-value">-</span>
+          </div>
+        </div>
+
+        <!-- On-screen Virtual Keyboard -->
+        <div class="keyboard-container">
+          <div id="keyboard" class="keyboard" aria-label="Alphabet keyboard"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Use your on-screen buttons or your physical keyboard to guess letters.</p>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
+
