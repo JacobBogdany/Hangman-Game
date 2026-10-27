@@ -154,37 +154,18 @@ The major user flows and failure cases are covered by automated tests.
 
 ### Tasks
 
-- [ ] Create or update `README.md`.
-- [ ] Document installation.
-- [ ] Document how to start the server.
-- [ ] Document how to use the browser client.
-- [ ] Document the REST API.
-- [ ] Provide example requests and responses.
-- [ ] Add dependency information such as `requirements.txt` or `pyproject.toml`.
-- [ ] Verify that a fresh installation works from the documented instructions.
+- [x] Create or update `README.md`.
+- [x] Document installation.
+- [x] Document how to start the server.
+- [x] Document how to use the browser client.
+- [x] Document the REST API.
+- [x] Provide example requests and responses.
+- [x] Add dependency information such as `requirements.txt` or `pyproject.toml`.
+- [x] Verify that a fresh installation works from the documented instructions.
 
 ### Completion Criteria
 
 A new user can clone the project, install dependencies, start the server, and play from the browser using only the documentation.
-
----
-
-# Optional Future Phases
-
-These should not be implemented until the core project is stable.
-
-## Persistent Storage
-
-- [ ] Store games in a database.
-
-## Accounts and Authentication
-
-- [ ] User accounts and stats.
-
-## Multiplayer
-
-- [ ] Human-vs-human modes.
-- [ ] Custom words.
 
 ---
 

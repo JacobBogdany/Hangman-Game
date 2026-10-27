@@ -188,14 +188,3 @@ Stored as
         ├── easy.txt
         ├── medium.txt
         └── hard.txt
-
-------------------------------------------------------------------------
-
-# Future Extensions
-
--   Multiplayer / Versus mode
--   User accounts and stats
--   Persistent database
--   Sound effects and animations
--   Custom word lists / categories
--   Daily challenge
