@@ -131,18 +131,18 @@ No hidden word is stored in browser-side JavaScript.
 
 ### Tasks
 
-- [ ] Complete unit tests for `HangmanGame`.
-- [ ] Complete tests for word loading.
-- [ ] Complete REST API tests.
-- [ ] Test duplicate guesses.
-- [ ] Test invalid letters.
-- [ ] Test invalid difficulty.
-- [ ] Test missing game IDs.
-- [ ] Test win paths.
-- [ ] Test loss paths.
-- [ ] Test answer disclosure rules.
-- [ ] Test browser-client integration.
-- [ ] Add an end-to-end automated test.
+- [x] Complete unit tests for `HangmanGame`.
+- [x] Complete tests for word loading.
+- [x] Complete REST API tests.
+- [x] Test duplicate guesses.
+- [x] Test invalid letters.
+- [x] Test invalid difficulty.
+- [x] Test missing game IDs.
+- [x] Test win paths.
+- [x] Test loss paths.
+- [x] Test answer disclosure rules.
+- [x] Test browser-client integration.
+- [x] Add an end-to-end automated test.
 
 ### Completion Criteria
 

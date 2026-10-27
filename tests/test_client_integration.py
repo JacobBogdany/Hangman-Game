@@ -25,6 +25,7 @@ class TestBrowserClientStaticAssets(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn("text/html", response.content_type)
         html = response.get_data(as_text=True)
+        response.close()
         self.assertIn("<!DOCTYPE html>", html)
         self.assertIn("<title>Hangman Game</title>", html)
 
@@ -33,6 +34,7 @@ class TestBrowserClientStaticAssets(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn("text/css", response.content_type)
         css = response.get_data(as_text=True)
+        response.close()
         self.assertIn(".hangman-canvas", css)
         self.assertIn("@media", css)
 
@@ -44,6 +46,7 @@ class TestBrowserClientStaticAssets(unittest.TestCase):
             f"Expected javascript in content-type, got {response.content_type}",
         )
         js = response.get_data(as_text=True)
+        response.close()
         self.assertIn("/api/games", js)
         self.assertIn("fetch", js)
 

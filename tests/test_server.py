@@ -21,6 +21,7 @@ class TestServerAPI(unittest.TestCase):
     def test_index_route(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
+        response.close()
 
     def test_404_handler_returns_json(self):
         response = self.client.get("/api/nonexistent_endpoint")
