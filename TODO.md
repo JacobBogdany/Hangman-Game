@@ -53,13 +53,13 @@ All core rules are covered by unit tests.
 
 ### Tasks
 
-- [ ] Create a word-loading module or helper functions.
-- [ ] Load Easy, Medium, and Hard word lists.
-- [ ] Validate that loaded words contain only alphabetic characters.
-- [ ] Remove accidental duplicates when loading.
-- [ ] Support random word selection by difficulty.
-- [ ] Return an error for an invalid difficulty.
-- [ ] Add tests for word loading and word selection.
+- [x] Create a word-loading module or helper functions.
+- [x] Load Easy, Medium, and Hard word lists.
+- [x] Validate that loaded words contain only alphabetic characters.
+- [x] Remove accidental duplicates when loading.
+- [x] Support random word selection by difficulty.
+- [x] Return an error for an invalid difficulty.
+- [x] Add tests for word loading and word selection.
 
 ### Completion Criteria
 
